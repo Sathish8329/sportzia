@@ -41,10 +41,7 @@ spec:
           initialDelaySeconds: 10
           periodSeconds: 10 
           failureThreshold: 3
-        resources:
-          requests:
-            cpu: "250m"
-            memory: "512Mi"
+
 ---
 
 apiVersion: v1
