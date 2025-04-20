@@ -9,19 +9,13 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($host = "sportzia.com") {
+        return 301 https://www.sportzia.com$request_uri;
+      }
 spec:
   rules:
-  - host: "sportzia.com"  # Root domain for frontend service
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: sportzia-app-service # Frontend service
-            port:
-              number: 3000  # Fix: Matches the service port
-  - host: "www.sportzia.com"
+  - host: www.sportzia.com
     http:
       paths:
       - path: /
@@ -30,4 +24,4 @@ spec:
           service:
             name: sportzia-app-service
             port:
-              number: 3000  # Fix: Matches the service port
+              number: 3000
