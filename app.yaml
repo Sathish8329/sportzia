@@ -29,7 +29,7 @@ spec:
       #   eks.amazonaws.com/nodegroup: stage-private
       containers:
       - name: frontend
-        image: sathish8329/sportzia:2462
+        image: sathish8329/sportzia:2601
         ports:
         - containerPort: 3000
         livenessProbe:
