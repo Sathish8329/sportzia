@@ -21,3 +21,7 @@ spec:
             name: sportzia-app-service
             port:
               number: 3000
+  tls:
+  - hosts:
+    - www.sportzia.com
+    secretName: cloudflare-tls-cert
