@@ -29,7 +29,7 @@ spec:
         eks.amazonaws.com/nodegroup: prod-private
       containers:
       - name: frontend
-        image: sathish8329/sportzia:3224
+        image: sathish8329/sportzia:3232
         ports:
         - containerPort: 3000
         livenessProbe:
