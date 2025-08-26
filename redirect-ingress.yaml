@@ -15,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: dummy-service  # won't be used, just required
+            name: sportzia-app-service  # won't be used, just required
             port:
               number: 80
