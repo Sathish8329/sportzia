@@ -26,7 +26,7 @@ spec:
         app: frontend
     spec:
       nodeSelector:
-        eks.amazonaws.com/nodegroup: gpu-on-demand-ng
+        eks.amazonaws.com/nodegroup: prod-private
       containers:
       - name: frontend
         image: sathish8329/sportzia:3836
