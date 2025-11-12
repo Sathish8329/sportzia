@@ -39,13 +39,13 @@ spec:
         image: sathish8329/sportzia:4877
         ports:
         - containerPort: 3000
-        resources:
-          requests:
-            cpu: "200m"
-            memory: "256Mi"
-          limits:
-            cpu: "500m"
-            memory: "512Mi"
+        # resources:
+        #   requests:
+        #     cpu: "200m"
+        #     memory: "256Mi"
+        #   limits:
+        #     cpu: "500m"
+        #     memory: "512Mi"
         livenessProbe:
           httpGet:
             path: /
