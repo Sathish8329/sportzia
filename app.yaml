@@ -27,11 +27,19 @@ spec:
     spec:
       nodeSelector:
         eks.amazonaws.com/nodegroup: prod-private
+      topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: "kubernetes.io/hostname"
+        whenUnsatisfiable: DoNotSchedule
+        labelSelector:
+          matchLabels:
+            app: frontend
       containers:
       - name: frontend
         image: sathish8329/sportzia:4877
         ports:
         - containerPort: 3000
+        # Optional: you can uncomment probes if you want health checks
         # livenessProbe:
         #   httpGet:
         #     path: /
@@ -46,6 +54,7 @@ spec:
         #   initialDelaySeconds: 30
         #   periodSeconds: 10 
         #   failureThreshold: 5
+
 
 ---
 
