@@ -36,7 +36,7 @@ spec:
             app: frontend
       containers:
       - name: frontend
-        image: sathish8329/sportzia:4982
+        image: sathish8329/sportzia:4997
         ports:
         - containerPort: 3000
         # resources:
